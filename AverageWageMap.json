@@ -1,0 +1,95 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 400,
+  "projection": { "type": "equalEarth" },
+  "layer": [
+  
+    {
+      "data": {
+        "url": "ne_110m.json",
+        "format": { "type": "topojson", "feature": "ne_110m_admin_0_countries" }
+      },
+      "mark": { "type": "geoshape", "color": "#cce0f1" }, 
+      "encoding": {
+        "tooltip": [
+          { "field": "properties.NAME", "type": "nominal", "title": "Country" }
+        ]
+      }
+    },
+
+    {
+      "data": {
+        "url": "ne_110m.json",
+        "format": { "type": "topojson", "feature": "ne_110m_admin_0_countries" }
+      },
+      "transform": [
+        {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": { "url": "Average Wage.csv" },
+            "key": "Country",
+            "fields": ["Average Wage"]
+          }
+        }
+      ],
+      "mark": { "type": "geoshape" },
+      "encoding": {
+        "color": {
+          "field": "Average Wage",
+          "type": "quantitative",
+          "scale": { "type": "linear", "scheme": "blues" },
+          "legend": {
+            "title": "Average Wage",
+            "orient": "right"
+          }
+        },
+        "tooltip": [
+          { "field": "properties.NAME", "type": "nominal", "title": "Country" },
+          { "field": "Average Wage", "type": "quantitative", "title": "Average Wage" }
+        ]
+      }
+    },
+    
+    {
+      "data": {
+        "url": "Average Wage.csv"
+      },
+      "transform": [
+        { "filter": "datum.Country === 'Australia'" }
+      ],
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "dx": -10,
+            "dy": -10,
+            "fontSize": 15,
+            "fontWeight": "bold"
+          },
+          "encoding": {
+            "longitude": { "field": "Longitude", "type": "quantitative" },
+            "latitude": { "field": "Latitude", "type": "quantitative" },
+            "text": { "value": "Australia's Average Wage" }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "dx": -10,
+            "dy": 20,
+            "fontSize": 15,
+            "fontWeight": "bold"
+          },
+          "encoding": {
+            "longitude": { "field": "Longitude", "type": "quantitative" },
+            "latitude": { "field": "Latitude", "type": "quantitative" },
+            "text": { "value": "= $63,140" }
+          }
+        }
+      ]
+    }
+  ]
+}

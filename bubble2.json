@@ -1,0 +1,149 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "title": "Cost of Living vs Quality of Life",
+    "data": {
+      "url": "Data.csv"
+    },
+    "params": [
+      {
+        "name": "Continent_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "Asia",
+            "Europe",
+            "North America",
+            "Oceania",
+            "South America",
+            "Africa"
+          ],
+          "labels": [
+            "Show All",
+            "Asia",
+            "Europe",
+            "North America",
+            "Oceania",
+            "South America",
+            "Africa"
+          ],
+          "name": "Continent Selection: "
+        }
+      },
+      {
+        "name": "Minimum_Population",
+        "value": 0,
+        "bind": {
+          "input": "range",
+          "min": 0,
+          "max": 100000000,
+          "step": 1000000,
+          "name": "Minimum Population: "
+        }
+      }
+    ],
+    "transform": [
+      {
+        "filter": "datum.Population > Minimum_Population"
+      },
+      {
+        "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+      }
+    ],
+    "layer": [
+      {
+        "mark": {
+          "type": "circle",
+          "tooltip": true
+        },
+        "encoding": {
+          "x": {
+            "field": "Cost of Bread",
+            "type": "quantitative",
+            "title": "Cost per Loaf of Bread (AUD)",
+            "scale": {"type": "linear"}
+          },
+          "y": {
+            "field": "Cost of Apartment",
+            "type": "quantitative",
+            "title": "Cost of Apartment (USD)",
+            "scale": {"type": "linear"}
+          },
+          "color": {
+            "field": "Continent",
+            "type": "nominal",
+            "scale": {
+              "domain": [
+                "Asia",
+                "Europe",
+                "North America",
+                "Oceania",
+                "South America",
+                "Africa"
+              ],
+              "range": [
+                "#377eb8",  
+                "#e41a1c",  
+                "#4daf4a",  
+                "#ff7f00", 
+                "#984ea3",  
+                "#a6d85a"   
+              ]
+            },
+            "title": "Continent"
+          },
+          "size": {
+            "field": "Quality of Life Index",
+            "type": "quantitative",
+            "title": "Quality of Life Index",
+            "aggregate": "mean",
+            "scale": {
+              "range": [10, 1500]  
+            }
+          },
+          "opacity": {
+            "value": 0.8
+          },
+          "tooltip": [
+            {"field": "Country", "type": "nominal", "title": "Country"},
+            {"field": "Cost of Bread", "type": "quantitative", "title": "Cost per Loaf of Bread (AUD)", "format": ".0f"},
+            {"field": "Cost of Apartment", "type": "quantitative", "title": "Cost of Apartment (AUD)", "format": ".0f"},
+            {"field": "Quality of Life Index", "type": "quantitative", "title": "Quality of Life Index", "format": ".0f"},
+            {"field": "Continent", "type": "nominal", "title": "Continent"}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "dx": 0,
+          "dy": -15
+        },
+        "encoding": {
+          "x": {"field": "Cost of Bread", "type": "quantitative"},
+          "y": {"field": "Cost of Apartment", "type": "quantitative"},
+          "text": {"field": "Country"},
+          "color": {"value": "black"}
+        },
+        "transform": [
+          {
+            "filter": {
+              "field": "Country",
+              "oneOf": [
+                "Australia", 
+                "United States", 
+                "China", 
+                "India", 
+                "Switzerland", 
+                "Hong Kong"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

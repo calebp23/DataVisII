@@ -1,0 +1,339 @@
+City,Cost of Living Index
+"Zurich, Switzerland",112.8
+"Geneva, Switzerland",110.1
+"Basel, Switzerland",109.9
+"Lausanne, Switzerland",109.7
+"Bern, Switzerland",103.6
+"New York, NY, United States",100
+"San Francisco, CA, United States",93.1
+"Honolulu, HI, United States",88.9
+"San Jose, CA, United States",88.6
+"Trondheim, Norway",87.8
+"Boston, MA, United States",86.3
+"Reykjavik, Iceland",86.1
+"Singapore, Singapore",84.6
+"London, United Kingdom",83.6
+"Oslo, Norway",83
+"Washington, DC, United States",82.4
+"Bergen, Norway",81.6
+"Hong Kong, Hong Kong (China)",81.3
+"Seattle, WA, United States",80.6
+"San Diego, CA, United States",79.6
+"Sacramento, CA, United States",79.4
+"Los Angeles, CA, United States",79.1
+"Copenhagen, Denmark",78.8
+"Canberra, Australia",77.8
+"Paris, France",77.6
+"Chicago, IL, United States",77
+"Sydney, Australia",76.7
+"Espoo, Finland",75.3
+"Miami, FL, United States",75.3
+"Raleigh, NC, United States",74
+"Aarhus, Denmark",73.9
+"Denver, CO, United States",73.8
+"Tel Aviv-Yafo, Israel",73.7
+"Amsterdam, Netherlands",73.7
+"Atlanta, GA, United States",73.2
+"New Orleans, LA, United States",73.1
+"Portland, OR, United States",72.8
+"Charlotte, NC, United States",72.7
+"Philadelphia, PA, United States",72.7
+"Tampa, FL, United States",72.6
+"Seoul, South Korea",72.5
+"Munich, Germany",72.5
+"Haarlem, Netherlands",72.3
+"Adelaide, Australia",71.8
+"Dublin, Ireland",71.8
+"Victoria, Canada",71.7
+"Salzburg, Austria",71.2
+"Edinburgh, United Kingdom",70.4
+"Wellington, New Zealand",70.2
+"Hamburg, Germany",69.9
+"Helsinki, Finland",69.7
+"Minneapolis, MN, United States",69.3
+"Cork, Ireland",69.2
+"Dallas, TX, United States",69.1
+"Orlando, FL, United States",69.1
+"Vancouver, Canada",68.9
+"Perth, Australia",68.8
+"Luxembourg, Luxembourg",68.7
+"Heidelberg, Germany",68.6
+"Stockholm, Sweden",68.6
+"Nashville, TN, United States",68.5
+"Darmstadt, Germany",68.5
+"Lyon, France",68.3
+"Maastricht, Netherlands",68.2
+"Brussels, Belgium",68.2
+"Auckland, New Zealand",67.9
+"Dusseldorf, Germany",67.7
+"Vienna, Austria",67.6
+"Toronto, Canada",67.5
+"Antwerp, Belgium",67.5
+"Milan, Italy",67.4
+"Manchester, United Kingdom",67.2
+"Melbourne, Australia",67.1
+"Brighton, United Kingdom",67.1
+"Stuttgart, Germany",66.8
+"Berlin, Germany",66.7
+"Brisbane, Australia",66.6
+"Freiburg im Breisgau, Germany",66.6
+"Calgary, Canada",66.4
+"Graz, Austria",66.2
+"Essen, Germany",66.2
+"Glasgow, United Kingdom",66
+"Phoenix, AZ, United States",65.7
+"Nuremberg, Germany",65.7
+"Bristol, United Kingdom",65.6
+"Las Vegas, NV, United States",65.6
+"Karlsruhe, Germany",65.5
+"Ottawa, Canada",65.5
+"Frankfurt, Germany",65.4
+"Halifax, Canada",65.4
+"Jerusalem, Israel",65.4
+"Bonn, Germany",65.3
+"Gent, Belgium",65.2
+"Cologne, Germany",64.9
+"Austin, TX, United States",64.4
+"Delft, Netherlands",64.3
+"Utrecht, Netherlands",64.2
+"Erlangen, Germany",64.1
+"Bologna, Italy",63.9
+"Salt Lake City, UT, United States",63.8
+"Hanover, Germany",63.7
+"Mannheim, Germany",63.7
+"Leeds, United Kingdom",63.7
+"Rotterdam, Netherlands",63.5
+"Liverpool, United Kingdom",63.4
+"Eindhoven, Netherlands",63.3
+"Quebec City, Canada",63.3
+"San Antonio, TX, United States",63.2
+"Montreal, Canada",63
+"Bremen, Germany",63
+"Christchurch, New Zealand",62.6
+"Leipzig, Germany",62.6
+"Aachen, Germany",62.5
+"Mississauga, Canada",62.4
+"Haifa, Israel",62.3
+"Gothenburg, Sweden",62.1
+"Houston, TX, United States",61.8
+"Boise, ID, United States",61.6
+"The Hague (Den Haag), Netherlands",61.4
+"Birmingham, United Kingdom",61.3
+"Dresden, Germany",61.1
+"Malmo, Sweden",60.9
+"Winnipeg, Canada",60.4
+"Belfast, United Kingdom",60.3
+"Genoa, Italy",60.1
+"Edmonton, Canada",60
+"Leuven, Belgium",59.8
+"Groningen, Netherlands",59.7
+"Limassol, Cyprus",59.6
+"Padova, Italy",59.2
+"London, Canada",59.1
+"Macao, Macao (China)",58.5
+"Dubai, United Arab Emirates",58.3
+"Tokyo, Japan",57.5
+"Turin, Italy",56.4
+"Tallinn, Estonia",56.3
+"Barcelona, Spain",56.2
+"Rome, Italy",55.7
+"Naples, Italy",54.3
+"Larnaca, Cyprus",54.3
+"Abu Dhabi, United Arab Emirates",54.3
+"Port of Spain, Trinidad And Tobago",54.2
+"Madrid, Spain",53.9
+"Thessaloniki, Greece",53.2
+"Athens, Greece",53.2
+"Ljubljana, Slovenia",53.2
+"Suzhou, China",53.1
+"Prague, Czech Republic",51.9
+"Nicosia, Cyprus",51.8
+"San Jose, Costa Rica",51.7
+"Tartu, Estonia",51.6
+"Montevideo, Uruguay",50.9
+"Bratislava, Slovakia",50.6
+"Lisbon, Portugal",50.6
+"Doha, Qatar",50.1
+"Vilnius, Lithuania",49.8
+"Riga, Latvia",49.8
+"Split, Croatia",49
+"Taipei, Taiwan",48.7
+"Manama, Bahrain",48.6
+"Sharjah, United Arab Emirates",48.2
+"Seville (Sevilla), Spain",47.3
+"Kaunas, Lithuania",47.1
+"Riyadh, Saudi Arabia",46.9
+"Addis Ababa, Ethiopia",46.7
+"Panama City, Panama",46.6
+"Valencia, Spain",46.6
+"Warsaw, Poland",46.3
+"Plzen, Czech Republic",46.1
+"Zagreb, Croatia",46.1
+"Malaga, Spain",46.1
+"Krakow (Cracow), Poland",46.1
+"Porto, Portugal",45.8
+"Tirana, Albania",45.4
+"Ostrava, Czech Republic",44.9
+"Brno, Czech Republic",44.6
+"Monterrey, Mexico",44.6
+"Jeddah (Jiddah), Saudi Arabia",44.4
+"Budapest, Hungary",44.1
+"Wroclaw, Poland",44
+"Yerevan, Armenia",44
+"Kuwait City, Kuwait",43.8
+"Beirut, Lebanon",43.8
+"Braga, Portugal",43.4
+"Gaborone, Botswana",43.4
+"Gdansk, Poland",43.3
+"Katowice, Poland",43.1
+"Belgrade, Serbia",42.9
+"Santo Domingo, Dominican Republic",42.7
+"Constanta, Romania",42.6
+"Bangkok, Thailand",42.6
+"Caracas, Venezuela",42.5
+"Santiago, Chile",42.4
+"Abidjan, Ivory Coast",42.3
+"Bucharest, Romania",42.3
+"Ad Dammam, Saudi Arabia",42.3
+"Poznan, Poland",42.1
+"Shanghai, China",42
+"Lodz, Poland",41.9
+"Sofia, Bulgaria",41.7
+"Phuket, Thailand",41.2
+"Szczecin, Poland",40.5
+"Muscat, Oman",40.5
+"Cluj-Napoca, Romania",40.4
+"Amman, Jordan",40.4
+"Guatemala City, Guatemala",40.3
+"Mexico City, Mexico",40.3
+"Novi Sad, Serbia",40.3
+"San Salvador, El Salvador",40
+"Beijing, China",39.7
+"Debrecen, Hungary",39.2
+"Varna, Bulgaria",38.9
+"Podgorica, Montenegro",38.8
+"Istanbul, Turkey",38.7
+"Merida, Mexico",38.7
+"Brasov, Romania",38.7
+"Tijuana, Mexico",38.6
+"Accra, Ghana",38.3
+"Phnom Penh, Cambodia",38.3
+"Shenzhen, China",38.3
+"Queretaro (Santiago de Querétaro), Mexico",38.2
+"Guadalajara, Mexico",37.9
+"Manila, Philippines",37.9
+"Oradea, Romania",37.6
+"Timisoara, Romania",37.5
+"Harare, Zimbabwe",37.4
+"Burgas, Bulgaria",37.3
+"Johannesburg, South Africa",37
+"Guangzhou, China",36.9
+"Kuala Lumpur, Malaysia",36.8
+"Iasi, Romania",36.8
+"Banja Luka, Bosnia And Herzegovina",36.8
+"Moscow, Russia",36.6
+"Guayaquil, Ecuador",36.4
+"Antalya, Turkey",36.3
+"Sarajevo, Bosnia And Herzegovina",36.1
+"Plovdiv, Bulgaria",36
+"Pattaya, Thailand",35.9
+"Sibiu, Romania",35.6
+"Tbilisi, Georgia",35.6
+"Hangzhou, China",35.3
+"Izmir, Turkey",35.2
+"Kampala, Uganda",35.1
+"Port Elizabeth, South Africa",35
+"Chisinau, Moldova",34.9
+"Ankara, Turkey",34.7
+"Cape Town, South Africa",34.7
+"Skopje, North Macedonia",34.6
+"Colombo, Sri Lanka",34.5
+"Nis, Serbia",34.2
+"Sao Paulo, Brazil",34.1
+"Pretoria, South Africa",34
+"Buenos Aires, Argentina",33.6
+"Quito, Ecuador",33.6
+"Ulaanbaatar, Mongolia",33.6
+"Casablanca, Morocco",33.4
+"Erbil (Irbil), Iraq",33.3
+"Lagos, Nigeria",33.1
+"Lima, Peru",32.9
+"Chiang Mai, Thailand",32.8
+"Rio de Janeiro, Brazil",32.7
+"Bursa, Turkey",32.5
+"Rabat, Morocco",32.2
+"Baku, Azerbaijan",31.8
+"Baghdad, Iraq",31.6
+"Saint Petersburg, Russia",31.6
+"Durban, South Africa",31.4
+"Florianopolis, Brazil",31.1
+"Brasilia, Brazil",31.1
+"Porto Alegre, Brazil",31
+"Campinas, Brazil",31
+"Almaty, Kazakhstan",30.9
+"Jakarta, Indonesia",30.8
+"Mersin, Turkey",30.7
+"Batumi, Ajara, Georgia",30.6
+"Chengdu, China",30.5
+"Wuhan, China",30.5
+"Vladivostok, Russia",30.4
+"Ho Chi Minh City, Vietnam",30.3
+"Nairobi, Kenya",30.3
+"Astana (Nur-Sultan), Kazakhstan",30.2
+"Cuenca, Ecuador",30.1
+"Medellin, Colombia",29.9
+"Fortaleza, Brazil",29.8
+"Hanoi, Vietnam",29.2
+"Algiers, Algeria",29.2
+"Belo Horizonte, Brazil",29.1
+"Tunis, Tunisia",29.1
+"Curitiba, Brazil",28.7
+"Bogota, Colombia",28.2
+"Cali, Colombia",28.2
+"Sao Jose dos Campos, Brazil",28.1
+"Pristina, Kosovo (Disputed Territory)",28.1
+"Kiev (Kyiv), Ukraine",28.1
+"Tehran, Iran",27.8
+"Bishkek, Kyrgyzstan",27.7
+"Yekaterinburg, Russia",27.6
+"Recife, Brazil",27.5
+"Krasnodar, Russia",27.4
+"Samara, Russia",27.3
+"Novosibirsk, Russia",27.2
+"Nizhny Novgorod, Russia",27.2
+"Kazan, Russia",27.2
+"Kaliningrad, Russia",27.1
+"Ufa, Russia",26.8
+"Minsk, Belarus",26.6
+"Mumbai, India",26.4
+"Rostov-on-Don (Rostov-na-donu), Russia",26.2
+"Tashkent, Uzbekistan",26.1
+"Dnipro, Ukraine",25.6
+"Odessa (Odesa), Ukraine",25.5
+"Kathmandu, Nepal",25.3
+"Gurgaon, India",25.3
+"Bangalore, India",25
+"Perm, Russia",25
+"Kharkiv, Ukraine",24.8
+"Lviv, Ukraine",24.6
+"Asuncion, Paraguay",24.2
+"Pune, India",23.3
+"Dhaka, Bangladesh",23.3
+"Delhi, India",23.2
+"Noida, India",23
+"Hyderabad, India",22.5
+"Ahmedabad, India",22.5
+"Chelyabinsk, Russia",22.2
+"Tripoli, Libya",21.5
+"Chennai, India",21.5
+"Islamabad, Pakistan",21
+"Chandigarh, India",20.7
+"Cairo, Egypt",20.5
+"Kolkata, India",20.4
+"Kochi, India",19.8
+"Jaipur, India",19.6
+"Surat, India",19.5
+"Lucknow (Lakhnau), India",19.2
+"Karachi, Pakistan",18.7
+"Lahore, Pakistan",18.5
+"Coimbatore, India",18.5

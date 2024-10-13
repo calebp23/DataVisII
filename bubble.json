@@ -1,0 +1,161 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 600,
+  "data": {
+    "url": "Data.csv"
+  },
+  "params": [
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Asia",
+          "Europe",
+          "North America",
+          "Oceania",
+          "South America",
+          "Africa"
+        ],
+        "labels": [
+          "Show All",
+          "Asia",
+          "Europe",
+          "North America",
+          "Oceania",
+          "South America",
+          "Africa"
+        ],
+        "name": "Continent Selection: "
+      }
+    },
+    {
+      "name": "Minimum_Population",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 100000000,
+        "step": 1000000,
+        "name": "Minimum Population: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.Population > Minimum_Population"
+    },
+    {
+      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "tooltip": true
+      },
+      "encoding": {
+        "x": {
+          "field": "Minimum Wage",
+          "type": "quantitative",
+          "title": "Minimum Wage (USD)",
+          "scale": {"type": "linear"}
+        },
+        "y": {
+          "field": "Cost of Apartment",
+          "type": "quantitative",
+          "title": "Cost of Apartment (USD)",
+          "scale": {"type": "linear"}
+        },
+        "color": {
+          "field": "Continent",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Asia",
+              "Europe",
+              "North America",
+              "Oceania",
+              "South America",
+              "Africa"
+            ],
+            "range": [
+              "#377eb8",  
+              "#e41a1c",  
+              "#4daf4a",  
+              "#ff7f00", 
+              "#984ea3",  
+              "#a6d85a"   
+            ]
+          },
+          "title": "Continent"
+        },
+        "size": {
+          "field": "Quality of Life Index",
+          "type": "quantitative",
+          "title": "Quality of Life Index",
+          "aggregate": "mean",
+          "scale": {
+            "range": [10, 1500]  
+          }
+        },
+        "opacity": {
+          "value": 0.8
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {"field": "Minimum Wage", "type": "quantitative", "title": "Minimum Wage (USD)", "format": ".0f"},
+          {"field": "Cost of Apartment", "type": "quantitative", "title": "Average Cost of Apartment (USD)", "format": ".0f"},
+          {"field": "Quality of Life Index", "type": "quantitative", "title": "Quality of Life Index", "format": ".0f"},
+          {"field": "Continent", "type": "nominal", "title": "Continent"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dx": 0,
+        "dy": -15
+      },
+      "encoding": {
+        "x": {"field": "Minimum Wage", "type": "quantitative"},
+        "y": {"field": "Cost of Apartment", "type": "quantitative"},
+        "text": {"field": "Country"},
+        "color": {
+          "condition": {
+            "test": "datum.Country == 'Australia'",
+            "value": "black"  
+          },
+          "value": "gray"  
+        },
+        "size": {
+          "condition": {
+            "test": "datum.Country == 'Australia'",
+            "value": 16  
+          },
+          "value": 10  
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "field": "Country",
+            "oneOf": [
+              "Australia", 
+              "United States", 
+              "China", 
+              "India", 
+              "Switzerland", 
+              "Hong Kong"
+            ]
+          }
+        }
+      ]
+    }
+    
+  ]
+}

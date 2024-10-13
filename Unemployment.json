@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "Unemployment.csv",
+    "format": { "type": "csv" }
+  },
+  "width": 800,
+  "height": 400,
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "tooltip": true
+      },
+      "encoding": {
+        "x": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": "y",
+          "axis": {
+            "labelAngle": -45
+          }
+        },
+        "y": {
+          "field": "Unemployment Rate",
+          "type": "quantitative",
+          "axis": {
+            "title": "Unemployment Rate",
+            "titleColor": "#6A5ACD",
+            "gridColor": "#6A5ACD",
+            "labelColor": "#6A5ACD"
+          }
+        },
+        "color": {
+          "value": "#6A5ACD"
+        },
+        "tooltip": [
+          { "field": "Country", "type": "nominal" },
+          { "field": "Unemployment Rate", "type": "quantitative" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "tooltip": true,
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "x": {
+          "field": "Country",
+          "type": "nominal",
+          "axis": {
+            "labelAngle": -45
+          }
+        },
+        "y": {
+          "field": "Interest Rate",
+          "type": "quantitative",
+          "axis": {
+            "title": "Interest Rate",
+            "titleColor": "#FF8C00",
+            "gridColor": "#FF8C00",
+            "labelColor": "#FF8C00"
+          }
+        },
+        "color": {
+          "value": "#FF8C00"
+        },
+        "tooltip": [
+          { "field": "Country", "type": "nominal" },
+          { "field": "Interest Rate", "type": "quantitative" }
+        ]
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "y": "independent"
+    }
+  }
+}

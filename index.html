@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Does Australia Stack Up?</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif; /* Keep Poppins for headings */
+            text-align: center;
+            background: linear-gradient(135deg, #81b5ab, #acb6e5);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 64px;
+            margin: 0;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        p.subtitle {
+            font-size: 24px;
+            color: #ecf0f1;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .chart-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .chart-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #2980b9;
+            margin: 10px 0;
+        }
+
+        .chart-subtitle {
+            font-size: 16px;
+            color: #2b3030;
+            margin: 5px 0;
+        }
+
+        .chart-paragraph {
+            font-family: 'Roboto', sans-serif; /* Use Roboto for the paragraph text */
+            font-size: 16px; /* Adjusted font size for better readability */
+            color: #515151; /* Dark gray for paragraph text */
+            margin-top: 10px; /* Spacing above the paragraph */
+            line-height: 1.6; /* Increased line height for readability */
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            p.subtitle {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero section for the title -->
+    <div class="hero">
+        <h1>How Does Australia Stack Up?</h1>
+        <p class="subtitle">Comparing the economic living standards of an average Australian from a global perspective</p>
+    </div>
+
+    <div class="container">
+        <div class="chart-container">
+            <div class="chart-title">Average Wage Across the Globe</div>
+            <div id="average_wage_map"></div>
+            <p class="chart-paragraph">This visualisation highlights how Australia's average wage compares to the global average. With the worldwide mean salary sitting around $10K USD, Australia significantly exceeds 
+                this figure, showcasing its strong earning potential. However, it's important to note that these wage figures don't account for variations in the cost of living across different countries. In some cases, 
+                lower wages may be balanced by a lower cost of living, making those incomes more sustainable. In the next visualisation, we'll explore how Australia's cost of living compares to other nations, providing a 
+                fuller picture of how income aligns with daily expenses across the globe. </p>
+        </div>
+        <div class="chart-container">
+            <div class="chart-title">Cost of Living by Country </div>
+            <div id="bubble_chart"></div>
+            <p class="chart-paragraph">When comparing metrics like minimum wage and average apartment cost, we gain valuable insight into the financial challenges of living in different countries. In places like 
+                Hong Kong, the disparity between the high cost of housing and the relatively low minimum wage highlights significant financial strain for residents. Conversely, Australia presents a more balanced picture. 
+                While the cost of an apartment is certainly high, the minimum wage is also comparatively generous, allowing for a more manageable cost of living. This balance suggests that, despite housing expenses, many 
+                Australians are better positioned to afford basic living costs, making it easier for individuals and families to maintain a decent standard of living. Additionally, the higher minimum wage provides greater 
+                financial security, helping to buffer against rising living costs and economic fluctuations. 
+            </p>
+        </div>
+        <div class="chart-container">
+            <div class="chart-title">Corruption Index v GDP</div>
+            <div id="bar_chart"></div>
+            <div class="chart-subtitle">**Note that high corruption is given with a low index rating**</div>
+            <p class="chart-paragraph">This visualisation highlights some of the world's most corrupt countries along with their respective corruption indexes. Notably, Australia ranks among the least corrupt, 
+                performing well in comparison to many other nations. The data suggests a correlation between lower corruption and more stable governance, which fosters economic growth. This is illustrated by the 
+                GDP line chart overlayed on the visualisation, showing that countries with stable leadership often experience stronger exports. This economic stability can lead to better living conditions, as governments
+                have greater resources to meet the needs of their populations.
+            </p>
+        </div>
+        <div class="chart-container">
+            <div class="chart-title">Unemployment v Interest Rate</div>
+            <div id="unemployment_chart"></div>
+            <p class="chart-paragraph">This chart illustrates the relationship between unemployment rates and interest rates across a range of countries. While some nations like Angola and Palestine exhibit both high 
+                unemployment and interest rates, Australia stands out with a notably low unemployment rate and a moderate interest rate. This economic stability makes Australia an attractive place to live, as lower
+                unemployment generally leads to higher job security and better wages. Additionally, a stable interest rate fosters a more favorable environment for borrowing and investing, further enhancing the quality 
+                of life for residents. These factors contribute to making Australia a desirable destination for those seeking economic opportunity and stability.</p>
+        </div>
+    </div>
+
+    <!-- Vega and Vega-Lite scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <!-- JavaScript for embedding the graphs -->
+    <script src="DatVisII.js"></script>
+</body>
+</html>

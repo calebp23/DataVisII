@@ -1,0 +1,149 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "Corruption Index.csv",
+    "format": { "type": "csv" }
+  },
+  "width": 800,
+  "height": 400,
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "tooltip": true
+      },
+      "encoding": {
+        "x": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": "y",
+          "axis": {
+            "labelAngle": -45
+          }
+        },
+        "y": {
+          "field": "Corruption Index",
+          "type": "quantitative",
+          "axis": {
+            "title": "Corruption Index",
+            "titleColor": "#d9534f",
+            "gridColor": "#d9534f",
+            "labelColor": "#d9534f"
+          }
+        },
+        "color": {
+          "value": "#d9534f"
+        },
+        "tooltip": [
+          { "field": "Country", "type": "nominal", "title": "Country" },
+          { "field": "Corruption Index", "type": "quantitative", "title": "Corruption Index" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "tooltip": true,
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "x": {
+          "field": "Country",
+          "type": "nominal",
+          "axis": {
+            "labelAngle": -45
+          }
+        },
+        "y": {
+          "field": "GDP per capita",
+          "type": "quantitative",
+          "axis": {
+            "title": "GDP per Capita",
+            "titleColor": "#5bc0de",
+            "gridColor": "#5bc0de",
+            "labelColor": "#5bc0de"
+          }
+        },
+        "color": {
+          "value": "#5bc0de"
+        },
+        "tooltip": [
+          { "field": "Country", "type": "nominal", "title": "Country" },
+          { "field": "GDP per capita", "type": "quantitative", "title": "GDP per Capita" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "tooltip": true
+      },
+      "encoding": {
+        "x": {
+          "field": "Country",
+          "type": "nominal",
+          "axis": {
+            "labelAngle": -45
+          }
+        },
+        "y": {
+          "field": "GDP per capita",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "#5bc0de"
+        },
+        "tooltip": [
+          { "field": "Country", "type": "nominal", "title": "Country" },
+          { "field": "GDP per capita", "type": "quantitative", "title": "GDP per Capita" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dy": -10
+      },
+      "encoding": {
+        "x": { "field": "Country", "type": "nominal" },
+        "y": { "field": "GDP per capita", "type": "quantitative" },
+        "text": { "field": "Country" },
+        "color": {
+          "condition": {
+            "test": "datum.Country == 'Australia'",
+            "value": "black"  
+          },
+          "value": "gray"  
+        },
+        "size": {
+          "condition": {
+            "test": "datum.Country == 'Australia'",
+            "value": 16  
+          },
+          "value": 10  
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "field": "Country",
+            "oneOf": [
+              "Australia", 
+              "United States", 
+              "China", 
+              "India", 
+              "Switzerland", 
+              "Hong Kong"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "y": "independent"
+    }
+  }
+}
